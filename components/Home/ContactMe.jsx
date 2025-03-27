@@ -26,8 +26,8 @@ function ContactMe() {
     backgroundSize: "cover"
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
+    // e.preventDefault();
     console.log("Form submitted");
   };
 

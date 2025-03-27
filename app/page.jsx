@@ -3,7 +3,7 @@ import React from 'react'
 // import Lottie from 'lottie-react'
 // import { Typewriter } from 'react-simple-typewriter'
 import dynamic from 'next/dynamic';
-const Typewriter = dynamic(() => import("react-simple-typewriter"), { ssr: false });
+const Typewriter = dynamic(() => import("react-simple-typewriter").then(mod => mod.Typewriter || mod), { ssr: false });
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import * as animation4 from '../public/lottieeJSON/anim4.json';
 import * as animation5 from '@/public/lottieeJSON/anim5.json';
@@ -28,8 +28,11 @@ function page() {
   const styleLottie2 = {
     height: "500px",
     width: "500px",
-    backgroundSize: "cover"
+    backgroundSize: "cover"   
   }
+  const animation4DataClone = JSON.parse(JSON.stringify(animation4));
+  const animation5DataClone = JSON.parse(JSON.stringify(animation5));
+  
 
   return (
     <main className='bg-[#010228] text-white w-full'>
@@ -41,7 +44,7 @@ function page() {
       <AboutMe/>
       <div id='page2' className="w-full md:h-[100vh] text-center bg-black bg-opacity-70 backdrop-blur-lg pb-1">
         <div className='flex items-center justify-center'>
-          <Lottie className='' animationData={animation4} style={ {
+          <Lottie className='' animationData={animation4DataClone } style={ {
             height: "600px",
             width: "600px",
             backgroundSize: "cover"
@@ -64,7 +67,7 @@ function page() {
       <div id='page3' className="w-full text-center bg-[#010228] pb-1">
         <div className='flex flex-col md:flex-row items-center justify-between px-[10%]'>
 
-        <Lottie animationData={animation5} style={styleLottie2} />
+        <Lottie animationData={animation5DataClone } style={styleLottie2} />
         <div className="md:w-[600px] h-[220px] text-3xl md:text-5xl font-mono font-medium text-left text-[#D2F220]">
               <Typewriter
                 words={["We’re building next-level experiences beamed from tomorrow to blow minds today."]}

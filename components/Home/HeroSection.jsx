@@ -23,12 +23,10 @@
 import React from 'react'
 import dynamic from "next/dynamic";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
-const Typewriter = dynamic(() => import("react-simple-typewriter"), { ssr: false });
-
+const Typewriter = dynamic(() => import("react-simple-typewriter").then(mod => mod.Typewriter || mod), { ssr: false });
 // import { Typewriter } from 'react-simple-typewriter'
 import * as animation1 from '@/public/lottieeJSON/anim1.json';
 import Image from 'next/image';
-import { FloatingDock } from "@/components/ui/floating-dock";
 import {
     IconBrandGithub,
     IconBrandX,

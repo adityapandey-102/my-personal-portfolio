@@ -25,7 +25,7 @@ import dynamic from "next/dynamic";
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 // import Lottie from 'lottie-react'
-import { Typewriter } from 'react-simple-typewriter'
+// import { Typewriter } from 'react-simple-typewriter'
 import * as animation1 from '@/public/lottieeJSON/anim1.json';
 import Image from 'next/image';
 import { FloatingDock } from "@/components/ui/floating-dock";
@@ -115,7 +115,7 @@ function HeroSection() {
                         <div className="w-full md:w-[670px] h-[120px]  md:h-[220px] space-y-3 text-xl md:text-5xl --md:text-5xl font-mono font-medium text-left">
                             <p>Hey 👋I'm</p>
                             <p> Aditya Pandey 👨🏻&zwj;💻</p>
-                            <Typewriter
+                            {/* <Typewriter
                                 words={companyTagline}
                                 loop={0} // Set to 0 for infinite loop
                                 cursor
@@ -123,7 +123,7 @@ function HeroSection() {
                                 typeSpeed={70}
                                 deleteSpeed={50}
                                 delaySpeed={1000}
-                            />
+                            /> */}
 
                         </div>
                         <div className="md:w-[700px]-- text-sm md:text-xl font-mono font-medium text-left mt-5 mb-5">

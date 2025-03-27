@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
-import Lottie from 'lottie-react'
-import { Typewriter } from 'react-simple-typewriter'
+// import Lottie from 'lottie-react'
+// import { Typewriter } from 'react-simple-typewriter'
 import * as animation4 from '../public/lottieeJSON/anim4.json';
 import * as animation5 from '@/public/lottieeJSON/anim5.json';
 import * as animation6 from '@/public/lottieeJSON/anim6.json';
@@ -44,7 +44,7 @@ function page() {
             backgroundSize: "cover"
           }} /> */}
         </div>
-          <div className='text-6xl font-semibold font-mono text-white'>
+          {/* <div className='text-6xl font-semibold font-mono text-white'>
           <Typewriter
                 words={["PHYSICAL PARK FOR DIGITAL WORD"]}
                 loop={1} 
@@ -53,7 +53,7 @@ function page() {
                 typeSpeed={70}
                 deleteSpeed={50}
                 delaySpeed={1000}
-              /></div>
+              /></div> */}
 
       </div>
 
@@ -63,7 +63,7 @@ function page() {
 
         {/* <Lottie animationData={animation5} style={styleLottie2} /> */}
         <div className="md:w-[600px] h-[220px] text-3xl md:text-5xl font-mono font-medium text-left text-[#D2F220]">
-              <Typewriter
+              {/* <Typewriter
                 words={["We’re building next-level experiences beamed from tomorrow to blow minds today."]}
                 loop={0} 
                 cursor
@@ -71,7 +71,7 @@ function page() {
                 typeSpeed={70}
                 deleteSpeed={50}
                 delaySpeed={1000}
-              />
+              /> */}
             </div>
         </div>
         <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />

@@ -10,8 +10,8 @@ import {
 } from "@tabler/icons-react";
 
 export default function SignupFormDemo() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
+    // e.preventDefault();
     console.log("Form submitted");
   };
   return (
